@@ -102,6 +102,21 @@ See [full pricing](https://chatdatasync.com/pricing-details.html).
 
 [See the full comparison →](https://chatdatasync.com/vs-airtable.html)
 
+## Templates
+
+Ready-to-use tracker setups you can copy into ChatData Sync in seconds — each is a
+plain-English prompt plus the fields it builds and example chat commands.
+
+| Template | Good for |
+| --- | --- |
+| [🚗 Car Maintenance](templates/car-maintenance.md) | Any vehicle owner |
+| [🧾 Household Bills](templates/household-bills.md) | Every household |
+| [💼 Client & Invoice Tracker](templates/client-invoice-tracker.md) | Pet sitters, tutors, handymen, freelancers |
+| [🍳 Recipe Box](templates/recipe-box.md) | Home cooks |
+| [🌱 Garden & Plant Log](templates/garden-plant-log.md) | Gardeners & plant parents |
+
+[Browse all templates →](templates/) — and contributions are welcome.
+
 ## Learn more
 
 - [How it works](https://chatdatasync.com/how-it-works.html)
