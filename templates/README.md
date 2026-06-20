@@ -25,6 +25,12 @@ it builds, connect your assistant, and start logging by chat.
 | [🍳 Recipe Box](recipe-box.md) | Home cooks | Recipes, ingredients, meal ideas |
 | [🌱 Garden & Plant Log](garden-plant-log.md) | Gardeners & plant parents | Plants, watering, planting and harvest dates |
 
+## Agentic workflows
+
+See [**Agentic Workflows with ChatData Sync**](agentic-workflows.md) — eight ways your
+ChatGPT agent can read, write, summarize, and even create trackers on its own as part of a
+single multi-step request.
+
 ## Contributing a template
 
 Have a setup that works well? Open an issue or a pull request with your template using the

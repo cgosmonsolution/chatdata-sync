@@ -117,6 +117,15 @@ plain-English prompt plus the fields it builds and example chat commands.
 
 [Browse all templates →](templates/) — and contributions are welcome.
 
+## Agentic workflows
+
+ChatData Sync is a **tool your AI agent can call**, not just passive storage. Inside the
+ChatGPT app the assistant can read, search, summarize, write, and even create new trackers
+on its own to complete a multi-step request — for example a one-line *"give me my morning
+briefing"* that pulls unpaid invoices and bills due across trackers and totals them for you.
+
+[See 8 agentic workflow examples →](templates/agentic-workflows.md)
+
 ## Learn more
 
 - [How it works](https://chatdatasync.com/how-it-works.html)
