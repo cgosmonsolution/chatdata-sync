@@ -126,6 +126,16 @@ briefing"* that pulls unpaid invoices and bills due across trackers and totals t
 
 [See 8 agentic workflow examples →](templates/agentic-workflows.md)
 
+## What's new
+
+Recent updates — all live in the app:
+
+- **Shape your tracker by chat.** Ask your assistant to add a new section or field — including dropdown choices and links between sections — without leaving the conversation. It reads your current setup first, so additions fit what you already have, and it never deletes anything.
+- **Set up by voice.** Tap the microphone when creating a tracker and just say what you want to keep track of.
+- **Link related lists.** Connect things like clients and their sessions, so your assistant can follow the relationship between them.
+- **Grow as you go.** Add a Record Boost (+10,000 records per tracker) or extra assistant actions whenever you need more headroom.
+- **Public Issue Tracker.** Report a bug or request a feature and follow what we're working on — see the running list at [chatdatasync.com/app#issues](https://chatdatasync.com/app#issues).
+
 ## Learn more
 
 - [How it works](https://chatdatasync.com/how-it-works.html)
