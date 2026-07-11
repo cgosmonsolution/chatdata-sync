@@ -2,17 +2,17 @@
 
 # ChatData Sync
 
-### Private structured memory for ChatGPT, Claude, and Gemini
+### Private structured memory for ChatGPT and Claude
 
 Describe what you want to keep track of in plain English. Your AI assistant logs it,
 updates it, finds it, and answers questions about it — no spreadsheets, no forms, no setup.
 
 [**Open the app →**](https://chatdatasync.com/app) &nbsp;·&nbsp;
-[**Get it in the ChatGPT App Store →**](https://chatgpt.com/apps/chatdata-sync/asdk_app_6a260ccbce68819189d814e03106a38a) &nbsp;·&nbsp;
+[**Open ChatData Sync in ChatGPT →**](https://chatgpt.com/apps/chatdata-sync/asdk_app_6a260ccbce68819189d814e03106a38a) &nbsp;·&nbsp;
 [**See how it works →**](https://chatdatasync.com/how-it-works.html)
 
 [![Website](https://img.shields.io/badge/Website-chatdatasync.com-0f766e?style=flat-square)](https://chatdatasync.com/)
-[![ChatGPT App Store](https://img.shields.io/badge/ChatGPT-App%20Store-10a37f?style=flat-square)](https://chatgpt.com/apps/chatdata-sync/asdk_app_6a260ccbce68819189d814e03106a38a)
+[![ChatGPT](https://img.shields.io/badge/ChatGPT-Available-10a37f?style=flat-square)](https://chatgpt.com/apps/chatdata-sync/asdk_app_6a260ccbce68819189d814e03106a38a)
 [![Pricing](https://img.shields.io/badge/Pricing-from%20%240-1d4ed8?style=flat-square)](https://chatdatasync.com/pricing-details.html)
 
 </div>
@@ -21,7 +21,7 @@ updates it, finds it, and answers questions about it — no spreadsheets, no for
 
 ## What is ChatData Sync?
 
-ChatGPT, Claude, and Gemini are great at conversation — but they forget your real
+ChatGPT and Claude are great at conversation — but they forget your real
 information the moment a chat closes. **ChatData Sync gives your assistant a private,
 reliable place to remember the things that matter to you**: your clients, your repairs,
 your recipes, your invoices, your habits.
@@ -53,16 +53,15 @@ all against data that stays yours.
    It designs the structure for you.
 2. **Review** — See the fields it suggests and adjust anything. Nothing is saved until
    you sign in.
-3. **Connect** — Paste one connection string into ChatGPT, Claude, or Gemini.
+3. **Connect** — Paste one connection string into ChatGPT or Claude.
 4. **Ask away** — Log something, find a record, or ask what's due — all through chat.
 
 ## Works with your assistant
 
 | Assistant | How |
 | --- | --- |
-| **ChatGPT** | Available in the [ChatGPT App Store](https://chatgpt.com/apps/chatdata-sync/asdk_app_6a260ccbce68819189d814e03106a38a). See the [ChatGPT tracker guide](https://chatdatasync.com/use-cases/chatgpt-tracker.html). |
+| **ChatGPT** | Available in ChatGPT. See the [ChatGPT tracker guide](https://chatdatasync.com/use-cases/chatgpt-tracker.html). |
 | **Claude** | Connect over MCP. See the [Claude MCP integration](https://chatdatasync.com/integrations/claude-mcp.html). |
-| **Gemini** | Connect via tools. See the [Gemini integration](https://chatdatasync.com/integrations/gemini-tools.html). |
 
 ## Privacy and ownership
 

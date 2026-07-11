@@ -12,7 +12,7 @@ it builds, connect your assistant, and start logging by chat.
 1. Open ChatData Sync and choose **Describe a tracker**.
 2. Paste the template's **Setup prompt**.
 3. Review the suggested fields and adjust anything you like.
-4. Connect ChatGPT, Claude, or Gemini with one paste.
+4. Connect ChatGPT or Claude with one paste.
 5. Talk to your assistant using the **Example commands**.
 
 ## Templates

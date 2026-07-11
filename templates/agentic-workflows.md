@@ -2,7 +2,7 @@
 
 ChatData Sync isn't just a place to store records — it's a **tool your AI agent can call**.
 In the [ChatGPT app](https://chatgpt.com/apps/chatdata-sync/asdk_app_6a260ccbce68819189d814e03106a38a)
-(and with Claude or Gemini), the assistant can read, write, search, summarize, and even
+(and with Claude), the assistant can read, write, search, summarize, and even
 create new trackers on its own as part of a larger task. That turns a simple chat into an
 **agentic workflow**: you state a goal, and the agent does several steps against your
 private data to reach it.
@@ -142,4 +142,4 @@ or start at [chatdatasync.com](https://chatdatasync.com/).
 
 ---
 
-[← All templates](README.md) · [How it works](https://chatdatasync.com/how-it-works.html) · [Claude MCP](https://chatdatasync.com/integrations/claude-mcp.html) · [Gemini](https://chatdatasync.com/integrations/gemini-tools.html)
+[← All templates](README.md) · [How it works](https://chatdatasync.com/how-it-works.html) · [Claude MCP](https://chatdatasync.com/integrations/claude-mcp.html)
