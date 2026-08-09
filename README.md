@@ -127,8 +127,13 @@ briefing"* that pulls unpaid invoices and bills due across trackers and totals t
 
 ## What's new
 
-Recent updates — all live in the app:
+Recent updates:
 
+- **Give each assistant only the access it needs.** Create separate named connections, choose which actions, sections, and fields each assistant can use, and pause, rotate, or revoke access without affecting your other connections.
+- **Edit complete records in the app.** Open any saved entry, review every field, and make corrections without rebuilding the record.
+- **Open shared trackers from an invitation.** Invitation links now take collaborators straight to the shared tracker after sign-in.
+- **Help compatible assistants learn your workflow faster.** Reusable ChatData Sync skills are available for lightweight CRM, maintenance logs, rental properties, study progress, and general tracking.
+- **Receive scheduled tracker reminders.** Trackers with reminders configured can send a concise email summary so important follow-ups do not get lost.
 - **Shape your tracker by chat.** Ask your assistant to add a new section or field — including dropdown choices and links between sections — without leaving the conversation. It reads your current setup first, so additions fit what you already have, and it never deletes anything.
 - **Set up by voice.** Tap the microphone when creating a tracker and just say what you want to keep track of.
 - **Link related lists.** Connect things like clients and their sessions, so your assistant can follow the relationship between them.
