@@ -151,7 +151,9 @@ Recent updates:
 
 ## About
 
-ChatData Sync is built and operated by **cgosmon solutions llc** — [cgosmon.com](https://cgosmon.com).
+ChatData Sync is owned and operated by **Smarter Way to Apply** — [smarterwaytoapply.com](https://smarterwaytoapply.com).
+
+Built by [Charles Anthony Gosmon](https://cgosmon.com). For support, email [support@smarterwaytoapply.com](mailto:support@smarterwaytoapply.com).
 
 > **Note:** This repository is the public home for ChatData Sync — product overview,
 > documentation links, and resources. The application source code is maintained

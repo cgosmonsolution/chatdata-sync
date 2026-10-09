@@ -39,4 +39,6 @@ welcome.
 
 ---
 
-Built by [cgosmon solutions llc](https://cgosmon.com) · [chatdatasync.com](https://chatdatasync.com/)
+Published by [Smarter Way to Apply](https://smarterwaytoapply.com) · Built by [Charles Anthony Gosmon](https://cgosmon.com) · [chatdatasync.com](https://chatdatasync.com/)
+
+Support: [support@smarterwaytoapply.com](mailto:support@smarterwaytoapply.com).
