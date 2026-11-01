@@ -12,12 +12,12 @@ Copy this into ChatData Sync:
 > the category (utilities, housing, subscriptions, insurance), and an optional note for
 > the account or confirmation number.
 
-## Fields it builds
+## Suggested fields to review
 
 | Field | Type | Example |
 | --- | --- | --- |
 | Bill | text | Electric — City Power |
-| Amount | currency | $128.40 |
+| Amount | number (USD) | 128.40 |
 | Due date | date | 2026-06-27 |
 | Status | choice | unpaid / paid / overdue |
 | Category | choice | utilities / housing / subscriptions / insurance |
@@ -36,6 +36,9 @@ Copy this into ChatData Sync:
 
 - Keep one row per bill per cycle so totals and "what's due" stay accurate.
 - Use the **Status** field consistently — it's what makes "unpaid this week" work.
+- Confirm the date range and use the saved due-date field, not record creation
+  time. A due date does not schedule a reminder, and marking paid does not pay a bill.
+- Use your actual saved field names and types; see the [template setup guidance](README.md).
 
 ---
 

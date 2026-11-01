@@ -12,7 +12,7 @@ Copy this into ChatData Sync:
 > the expected harvest or bloom date, its current status (healthy, needs water, struggling),
 > and notes. I also want to log watering and care events over time.
 
-## Fields it builds
+## Suggested fields to review
 
 | Field | Type | Example |
 | --- | --- | --- |
@@ -36,7 +36,10 @@ Copy this into ChatData Sync:
 ## Tips
 
 - Update **Last watered** by chat each time — then "which plants need water" stays useful.
-- Use one row per plant; log recurring care in the notes or as new dated entries.
+- Use one row per plant. For care history, review a separate dated care-events
+  section with a declared plant reference rather than mixing two record layouts.
+- Confirm watering rules; a text schedule does not run reminders or automatically
+  change plant status. Use your actual fields from the [reviewed setup](README.md).
 
 ---
 

@@ -9,11 +9,22 @@ it builds, connect your assistant, and start logging by chat.
 
 ## How to use a template
 
-1. Open ChatData Sync and choose **Describe a tracker**.
+1. [Sign in to ChatData Sync](https://chatdatasync.com/app?start=1) and describe a new tracker.
 2. Paste the template's **Setup prompt**.
 3. Review the suggested fields and adjust anything you like.
-4. Connect ChatGPT or Claude with one paste.
+4. Follow the **Connect** guide for ChatGPT, Claude, [Gemini CLI](../GEMINI-CLI.md),
+   or another compatible assistant.
 5. Talk to your assistant using the **Example commands**.
+
+Template fields are suggestions, not a guaranteed generated contract. Review your
+actual sections, saved field identifiers, types, units, and choices. The assistant
+must read `get_sync_context` before record operations and use that live layout.
+Amounts are numeric fields with an agreed currency such as USD, not a separate
+`currency` type. Names and display examples are not literal tool argument values.
+
+Saving a due date or watering schedule does not create an automatic reminder.
+Configure reminders separately. Updates and deletions need confirmation, current
+revisions, and write permission; review-mode proposals are not saved until approved.
 
 ## Templates
 
@@ -28,8 +39,9 @@ it builds, connect your assistant, and start logging by chat.
 ## Agentic workflows
 
 See [**Agentic Workflows with ChatData Sync**](agentic-workflows.md) — eight ways your
-ChatGPT agent can read, write, summarize, and even create trackers on its own as part of a
-single multi-step request.
+compatible agent can read, write, and summarize as part of a multi-step request.
+Cross-tracker work and creating trackers require explicit account-wide owner access
+and additional tools not included in the core Gemini extension.
 
 ## Contributing a template
 

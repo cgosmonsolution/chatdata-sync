@@ -1,0 +1,31 @@
+{
+  "name": "chatdatasync",
+  "version": "1.0.0",
+  "description": "Save, find, and summarize your private trackers with Gemini through ChatData Sync.",
+  "contextFileName": "GEMINI.md",
+  "settings": [
+    {
+      "name": "ChatData Sync connection key",
+      "description": "Create a named, tracker-specific connection in the Connect tab at https://chatdatasync.com/app. Grant only the permissions you need.",
+      "envVar": "CHATDATASYNC_API_KEY",
+      "sensitive": true
+    }
+  ],
+  "mcpServers": {
+    "chatdatasync": {
+      "httpUrl": "https://chatdatasync.com/api/mcp",
+      "headers": {
+        "x-api-key": "${CHATDATASYNC_API_KEY}"
+      },
+      "includeTools": [
+        "get_sync_context",
+        "list_records",
+        "get_record",
+        "create_record",
+        "update_record",
+        "delete_record",
+        "summarize_records"
+      ]
+    }
+  }
+}

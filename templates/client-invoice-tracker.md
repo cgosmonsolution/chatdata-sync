@@ -12,7 +12,7 @@ Copy this into ChatData Sync:
 > the duration or quantity, the rate, the total amount, the payment status (unpaid, paid,
 > invoiced), and notes. I also want basic client contact info like phone or email.
 
-## Fields it builds
+## Suggested fields to review
 
 | Field | Type | Example |
 | --- | --- | --- |
@@ -21,8 +21,8 @@ Copy this into ChatData Sync:
 | Service / job | text | Math tutoring session |
 | Date | date | 2026-06-19 |
 | Duration / qty | number | 1.5 (hours) |
-| Rate | currency | $40/hr |
-| Total | currency | $60.00 |
+| Rate | number (USD/hour) | 40 |
+| Total | number (USD) | 60.00 |
 | Status | choice | unpaid / invoiced / paid |
 | Notes | text | Covered algebra ch. 4 |
 
@@ -37,8 +37,13 @@ Copy this into ChatData Sync:
 
 ## Tips
 
-- One row per job or session keeps your earnings and unpaid totals exact.
-- Use a consistent **Client** name so "earned from Sarah" groups correctly.
+- Use one row per job or session and structured summaries. Check completeness
+  warnings and confirm whether "earned" means work performed or payments received.
+- Use a consistent **Client** name for filtering. Grouped linked summaries require
+  a declared reference to a separate client section, not a join inferred from names.
+- Rate times duration is not an automatic calculated field. Confirm and save the
+  total explicitly; tracking an invoice does not create or collect a payment.
+- Use your actual saved field names and types; see the [template setup guidance](README.md).
 - Real-world example: see the [tutoring field story](https://chatdatasync.com/use-cases/tutor-field-story.html).
 
 ---

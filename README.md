@@ -2,10 +2,10 @@
 
 # ChatData Sync
 
-### Private structured memory for ChatGPT and Claude
+### Private structured memory for ChatGPT, Claude, Gemini CLI, and compatible agents
 
 Describe what you want to keep track of in plain English. Your AI assistant logs it,
-updates it, finds it, and answers questions about it — no spreadsheets, no forms, no setup.
+updates it, finds it, and answers questions about it — without building a backend.
 
 [**Open the app →**](https://chatdatasync.com/app) &nbsp;·&nbsp;
 [**Open ChatData Sync in ChatGPT →**](https://chatgpt.com/apps/chatdata-sync/asdk_app_6a260ccbce68819189d814e03106a38a) &nbsp;·&nbsp;
@@ -21,10 +21,10 @@ updates it, finds it, and answers questions about it — no spreadsheets, no for
 
 ## What is ChatData Sync?
 
-ChatGPT and Claude are great at conversation — but they forget your real
-information the moment a chat closes. **ChatData Sync gives your assistant a private,
-reliable place to remember the things that matter to you**: your clients, your repairs,
-your recipes, your invoices, your habits.
+**ChatData Sync is an assistant-agnostic, private structured memory and tracker
+layer.** Create trackers from plain-English descriptions or spreadsheets, then let
+authorized assistants save, find, update, and summarize the same records: your
+clients, repairs, recipes, invoices, and garden logs.
 
 You describe your workflow in plain English. ChatData Sync builds the structure for you
 and connects it to your assistant. From then on, you just talk:
@@ -38,6 +38,16 @@ and connects it to your assistant. From then on, you just talk:
 Your assistant saves, updates, finds, counts, and summarizes — all from natural language,
 all against data that stays yours.
 
+Your assistant can change. Your organized records stay yours. ChatData Sync owns
+storage, structure, permissions, and record operations; the connected assistant
+owns conversation, reasoning, and any separately configured workflows.
+Compatible MCP or REST clients can connect, but each host determines which
+connection methods and tools it supports.
+
+This public repository contains product documentation, reusable templates, and
+the Gemini CLI extension. It does not contain the private application backend,
+customer records, or credentials.
+
 ## Who it's for
 
 - **Solo service businesses** — pet sitters, tutors, handymen, freelancers tracking
@@ -49,12 +59,14 @@ all against data that stays yours.
 
 ## How it works
 
-1. **Describe** — Tell ChatData Sync what you want to keep track of, in plain English.
-   It designs the structure for you.
-2. **Review** — See the fields it suggests and adjust anything. Nothing is saved until
-   you sign in.
-3. **Connect** — Paste one connection string into ChatGPT or Claude.
-4. **Ask away** — Log something, find a record, or ask what's due — all through chat.
+1. **Start** — [Sign in](https://chatdatasync.com/app?start=1), describe your tracker,
+   choose a template, or import a CSV/Excel file.
+2. **Review** — Check the suggested sections, fields, and any import notes, then
+   create the tracker. Review optional row imports before saving.
+3. **Connect** — Follow the tracker's **Connect** guide for your assistant.
+   Give each assistant its own named connection and only the permissions it needs.
+4. **Verify** — Save a small entry, ask the assistant to read it back, and check
+   the names, dates, amounts, and saved confirmation.
 
 ## Works with your assistant
 
@@ -62,15 +74,90 @@ all against data that stays yours.
 | --- | --- |
 | **ChatGPT** | Available in ChatGPT. See the [ChatGPT tracker guide](https://chatdatasync.com/use-cases/chatgpt-tracker.html). |
 | **Claude** | Connect over MCP. See the [Claude MCP integration](https://chatdatasync.com/integrations/claude-mcp.html). |
+| **Gemini CLI** | Install this repository as a native Streamable HTTP MCP extension. See [Gemini CLI setup](GEMINI-CLI.md). |
+| **Custom agents and compatible MCP/REST clients** | Use the [system-agnostic connection guide](https://chatdatasync.com/integrations/agents.html) and the live [MCP endpoint](https://chatdatasync.com/api/mcp). |
+
+### Install the Gemini CLI extension
+
+```shell
+gemini extensions install https://github.com/cgosmonsolution/chatdata-sync
+```
+
+Enter a named, tracker-specific connection key at Gemini's **sensitive setting
+prompt**, never in chat or command-line arguments. No npm install, Node bridge,
+or build step is needed. See [setup, tool scope, and troubleshooting](GEMINI-CLI.md).
+
+This is a **Gemini CLI extension**, not a consumer Gemini web-app integration,
+Google Chat bot, or Google Workspace Marketplace listing. The repository is
+discoverable by the Gemini CLI gallery through its `gemini-cli-extension` topic;
+gallery indexing and acceptance are controlled by Google, not guaranteed here.
+
+## What can you do today?
+
+- **Create trackers without backend tooling.** Describe a goal, use voice during
+  setup, or import CSV/TSV/Excel files up to 10 MB. Each usable Excel sheet becomes
+  a section. Review inferred types and import notes; rows are saved in batches,
+  and an interrupted import may leave earlier batches saved.
+- **Browse and correct entries in the app.** Use tables, cards, charts, record
+  details, and private attachments. Edit a record's fields without rebuilding it.
+- **Share a tracker with a visual workspace.** Invite collaborators with **Can
+  view** or **Can edit** access. They can open the tracker, browse entries and
+  attachments, and export CSV; editors can also change or delete entries and
+  manage attachments. Layout, sharing, backups, and history restoration remain
+  owner-only. A collaborator's assistant connection never expands their access.
+- **Control every assistant connection.** Restrict actions, sections, fields, and
+  expiry; pause, rotate, or revoke connections independently. Choose direct writes
+  or **review-before-saving**. Proposed changes awaiting approval are not saved
+  records; approval rechecks current permissions and revisions.
+- **Keep context and meaning consistent.** Connected agents read the live tracker
+  layout, units, choices, and declared links. Owners can review and approve drafted
+  agent guides; scoped section skills are available to compatible hosts.
+- **Get evidence-backed counts and sums.** Structured summaries use exact filters
+  and can group by declared links between sections. Preserve the returned canonical
+  answer and completeness warnings. Reusing the same query and answer ID can detect
+  changed answers across assistants; this is not a locked snapshot.
+- **Choose how to search.** Exact retrieval is the default. Optional semantic
+  search ranks a bounded authorized candidate set using configured AI and safety
+  providers; it is not a complete index of every historical record.
+- **Keep files with records.** Save supported documents, spreadsheets, text files,
+  and images as private attachments. ChatGPT's attachment tool requires a
+  host-provided file parameter; arbitrary download URLs are not accepted.
+  Do not assume every assistant supports the same upload workflow.
+- **Review history and recover mistakes.** Inspect saved record versions, restore
+  a selected version as a new revision, and recover deleted records within 30 days.
+  Retained copies and history still consume storage; expiry is not automatic erasure.
+- **Take your data with you.** Every plan includes CSV export. Owners can export
+  and import versioned JSON backups with layout, records, history, and attachment
+  manifests. Manifests do not contain file bytes; download important files separately.
+  Exports are not atomic snapshots, and multi-batch imports can partially complete.
+- **Synchronize compatible agents.** The MCP change journal lets clients retrieve
+  authorized record and layout changes since a checkpoint. File-only changes are
+  not journaled. Optional signed external notifications require platform delivery
+  to be enabled and an owner-configured destination; they are not reminders.
+
+### What is not automatic?
+
+Saving a due date does **not** schedule a reminder, recording a bill does **not**
+pay it, and drafting a message does **not** send it. Scheduled tracker emails
+require reminder configuration; external automation needs separately connected
+tools. AI can make mistakes, so review important writes and returned totals.
+
+The full MCP service offers more tools than the conservative Gemini extension.
+This extension exposes seven core record tools, not tracker creation, layout
+changes, semantic search, history, change polling, or attachment uploads.
+Use the appropriate host connection guide for those additional capabilities.
 
 ## Privacy and ownership
 
-- **Each tracker is locked to your account.** Your assistant can only reach its own
-  tracker — it cannot see anyone else's data.
+- **Private by default.** Tracker-specific credentials authorize one tracker.
+  Invitations and explicit connection permissions determine who can see or edit it.
 - **You stay in control.** Revoke assistant access at any time, and export everything
   to CSV whenever you want.
-- **Owner-scoped account actions** with a separate, project-scoped token for assistant
-  access — so a connected assistant gets exactly the reach you grant it, and nothing more.
+- **Broader access is explicit.** Cross-tracker work and creating new trackers
+  require an owner-authorized, account-wide connection, not a tracker-specific key.
+- **Your records are not sold or used to train AI models by ChatData Sync.**
+  Tracker design, voice transcription, optional semantic search, and connected
+  assistants involve providers under their respective terms.
 
 Read the [security overview](https://chatdatasync.com/security.html) and the
 [privacy policy](https://chatdatasync.com/legal/privacy-policy.html).
@@ -79,23 +166,33 @@ Read the [security overview](https://chatdatasync.com/security.html) and the
 
 ChatData Sync charges per tracker, with bundle discounts.
 
-| Plan | Price | Includes |
-| --- | --- | --- |
-| **Free** | $0 | 1 tracking space · 200 assistant actions/mo · no credit card |
-| **Single Tracker** | $6.99/mo | 1 paid tracking space · 500 actions/mo |
-| **Side Hustle** | $19/mo | 3-tracker bundle · 1,500 actions/mo |
-| **Growing Business** | $49/mo | 10-tracker bundle · 6,000 actions/mo |
-| **Team** | $99/mo | 25-tracker bundle · 20,000 actions/mo |
+| Plan | Monthly price | Tracking spaces | Assistant actions/month | Shared record and file storage |
+| --- | --- | --- | --- | --- |
+| **Free** | $0 | 1 | 200 | 1 GB |
+| **Single Tracker** | $6.99 per paid tracker | 1 per subscription, plus included free tracker | 500 pooled | 5 GB |
+| **Side Hustle** | $19 | 3 | 1,500 | 10 GB |
+| **Growing Business** | $49 | 10 | 6,000 | 25 GB |
+| **Team** | $99 | 25 | 20,000 | 50 GB |
 
 All plans include CSV export and AI assistant connections.
 See [full pricing](https://chatdatasync.com/pricing-details.html).
 
+There is **no fixed per-tracker record cap**: records and files use shared private
+storage. Metered assistant actions are record changes, counted per entry for bulk
+writes; reads, searches, summaries, and dashboard browsing do not use that allowance.
+Extra Single Tracker subscriptions do not multiply the pooled action allowance.
+
+Current add-ons: **Storage Boost** (+10 GB for $5/month, subject to the account
+storage ceiling), **Action top-up** (+500 for $5 once in the current billing
+period), and **Action add-on** (+1,000 for $7/month). Annual options and current
+checkout terms are on the pricing page.
+
 ## How it compares
 
-- **vs Airtable** — ChatData Sync generates structure from plain English; Airtable
-  requires manual schema design. ChatData Sync is purpose-built for AI read/write access.
-- **vs Notion** — Notion is for writing and wikis; ChatData Sync is structured,
-  queryable, and AI-native.
+- **vs Airtable** — ChatData Sync focuses on plain-English tracker setup and scoped
+  assistant record operations rather than a general-purpose database workspace.
+- **vs Notion** — ChatData Sync focuses on structured tracker records and authorized
+  assistant access rather than a general-purpose document workspace.
 - **vs Zapier** — Zapier connects existing apps via triggers; ChatData Sync is a private
   data layer, not a workflow connector. They're complementary.
 
@@ -104,7 +201,7 @@ See [full pricing](https://chatdatasync.com/pricing-details.html).
 ## Templates
 
 Ready-to-use tracker setups you can copy into ChatData Sync in seconds — each is a
-plain-English prompt plus the fields it builds and example chat commands.
+plain-English prompt plus suggested fields to review and example chat commands.
 
 | Template | Good for |
 | --- | --- |
@@ -118,27 +215,28 @@ plain-English prompt plus the fields it builds and example chat commands.
 
 ## Agentic workflows
 
-ChatData Sync is a **tool your AI agent can call**, not just passive storage. Inside the
-ChatGPT app the assistant can read, search, summarize, write, and even create new trackers
-on its own to complete a multi-step request — for example a one-line *"give me my morning
-briefing"* that pulls unpaid invoices and bills due across trackers and totals them for you.
+ChatData Sync is a **tool your AI agent can call**, not just passive storage. A connected
+assistant can read context, retrieve records, summarize, and write permitted
+changes as part of a multi-step request. Cross-tracker briefings and creating new
+trackers need explicit account-wide owner authorization and host tool support.
+MCP tracker creation starts with a basic layout; custom sections and fields are
+separate additive steps.
 
 [See 8 agentic workflow examples →](templates/agentic-workflows.md)
 
 ## What's new
 
-Recent updates:
+Documentation refreshed November 1, 2026:
 
-- **Give each assistant only the access it needs.** Create separate named connections, choose which actions, sections, and fields each assistant can use, and pause, rotate, or revoke access without affecting your other connections.
-- **Edit complete records in the app.** Open any saved entry, review every field, and make corrections without rebuilding the record.
-- **Open shared trackers from an invitation.** Invitation links now take collaborators straight to the shared tracker after sign-in.
-- **Help compatible assistants learn your workflow faster.** Reusable ChatData Sync skills are available for lightweight CRM, maintenance logs, rental properties, study progress, and general tracking.
-- **Receive scheduled tracker reminders.** Trackers with reminders configured can send a concise email summary so important follow-ups do not get lost.
-- **Shape your tracker by chat.** Ask your assistant to add a new section or field — including dropdown choices and links between sections — without leaving the conversation. It reads your current setup first, so additions fit what you already have, and it never deletes anything.
-- **Set up by voice.** Tap the microphone when creating a tracker and just say what you want to keep track of.
-- **Link related lists.** Connect things like clients and their sessions, so your assistant can follow the relationship between them.
-- **Grow as you go.** Add a Record Boost (+10,000 records per tracker) or extra assistant actions whenever you need more headroom.
-- **Public Issue Tracker.** Report a bug or request a feature and follow what we're working on — see the running list at [chatdatasync.com/app#issues](https://chatdatasync.com/app#issues).
+- Gemini CLI extension package with native HTTP transport and sensitive-key setup.
+- Assistant-agnostic positioning and connection-specific permission guidance.
+- Shared visual tracker workspace, spreadsheet import, private attachments, and
+  owner-reviewed agent guides.
+- Review-before-saving, version recovery, portable backups, and change checkpoints.
+- Canonical summary evidence, bounded optional semantic search, and storage-based limits.
+
+The extension package is published here; gallery indexing and an authenticated
+Gemini end-to-end smoke test are not claimed as completed.
 
 ## Learn more
 
@@ -148,6 +246,10 @@ Recent updates:
 - [FAQ](https://chatdatasync.com/faq.html)
 - [White paper](https://chatdatasync.com/white-paper.html)
 - [Docs](https://chatdatasync.com/docs.html)
+- [Real customer workflows and editable starters](https://chatdatasync.com/use-cases/user-workflows.html)
+- [First tracker walkthrough](https://chatdatasync.com/first-tracker/)
+- [Gemini CLI extension setup](GEMINI-CLI.md)
+- [System-agnostic agent connections](https://chatdatasync.com/integrations/agents.html)
 
 ## About
 

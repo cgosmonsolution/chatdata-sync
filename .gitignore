@@ -1,0 +1,6 @@
+.env
+.env.*
+.gemini/
+node_modules/
+*.pem
+*.key

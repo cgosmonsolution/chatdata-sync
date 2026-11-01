@@ -12,7 +12,7 @@ Copy this into ChatData Sync:
 > servings, a source or link, and the full instructions or notes. I want to be able to
 > find recipes by ingredient or category.
 
-## Fields it builds
+## Suggested fields to review
 
 | Field | Type | Example |
 | --- | --- | --- |
@@ -36,6 +36,7 @@ Copy this into ChatData Sync:
 
 - List ingredients in a simple comma-separated style so "which recipes use chicken" works well.
 - Keep **Category** values consistent for clean filtering.
+- Use your actual saved field names and types; see the [template setup guidance](README.md).
 
 ---
 
