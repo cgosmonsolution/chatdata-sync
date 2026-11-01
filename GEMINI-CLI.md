@@ -6,6 +6,11 @@ extension source; the hosted service keeps your records and enforces permissions
 
 ## Install and connect
 
+You need two independent connections: supported Google authentication to run
+Gemini's AI, and a ChatData Sync connection key to access your tracker. Your
+ChatData Sync key does not authenticate you with Google. Confirm that Gemini can
+answer an ordinary question before testing tracker tools.
+
 1. Install a current [Gemini CLI](https://geminicli.com/docs/get-started/installation/)
    with extension settings and Streamable HTTP support.
 2. [Sign in to ChatData Sync](https://chatdatasync.com/app), open a tracker, and
@@ -71,6 +76,16 @@ gallery acceptance are separate checks, not certifications claimed by this READM
 
 ## Troubleshooting and updates
 
+- **Google sign-in fails before any tracker call:** during a November 1, 2026
+  test with Gemini CLI 0.42.0, Google returned `UNSUPPORTED_CLIENT` for its
+  Code Assist for individuals authentication route. The error directed the tester
+  to Antigravity. This observation does not establish that every account or
+  authentication method is affected, or that Antigravity accepts this extension.
+  Check Google's current supported authentication options and any eligibility,
+  project, or billing requirements. Do not rotate your ChatData Sync key to fix
+  a Google sign-in rejection: no tracker call has occurred at that stage.
+  A successful extension installation is not an authenticated end-to-end test,
+  and this sign-in error is not a gallery rejection.
 - **Missing or rotated key:** run `gemini extensions config chatdatasync` and
   restart. If no prompt appeared during installation, configure the key here.
 - **Denied tool call:** check connection status, expiry, and permissions in
