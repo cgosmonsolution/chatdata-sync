@@ -63,19 +63,34 @@ customer records, or credentials.
    choose a template, or import a CSV/Excel file.
 2. **Review** — Check the suggested sections, fields, and any import notes, then
    create the tracker. Review optional row imports before saving.
-3. **Connect** — Follow the tracker's **Connect** guide for your assistant.
-   Give each assistant its own named connection and only the permissions it needs.
-4. **Verify** — Save a small entry, ask the assistant to read it back, and check
-   the names, dates, amounts, and saved confirmation.
+3. **Connect** — If you're using ChatGPT, start with the hosted app below. For
+   other assistants, follow your tracker's **Connect** guide. Grant only the
+   access the assistant needs.
+4. **Verify** — Ask the assistant to list the sections in your test tracker
+   without making changes. If your workflow also needs write access, verify a
+   harmless test entry separately.
 
 ## Works with your assistant
 
 | Assistant | How |
 | --- | --- |
-| **ChatGPT** | Available in ChatGPT. See the [ChatGPT tracker guide](https://chatdatasync.com/use-cases/chatgpt-tracker.html). |
+| **ChatGPT** | Open the [ChatData Sync app in ChatGPT](https://chatgpt.com/apps/chatdata-sync/asdk_app_6a260ccbce68819189d814e03106a38a), where available. Follow the [ChatGPT setup guide](https://chatdatasync.com/use-cases/chatgpt-tracker). |
 | **Claude** | Connect over MCP. See the [Claude MCP integration](https://chatdatasync.com/integrations/claude-mcp.html). |
 | **Gemini CLI** | Install this repository as a native Streamable HTTP MCP extension. See [Gemini CLI setup](GEMINI-CLI.md). |
 | **Custom agents and compatible MCP/REST clients** | Use the [system-agnostic connection guide](https://chatdatasync.com/integrations/agents.html) and the live [MCP endpoint](https://chatdatasync.com/api/mcp). |
+
+### Connect through the ChatGPT app
+
+Sign in to ChatData Sync when prompted. On the authorization screen, select only
+the tracker or trackers you need and review the permissions before approving.
+Back in ChatGPT, try: “Using ChatData Sync, list the sections in my sample tracker.
+Don’t change anything.”
+
+**Already using custom GPT Actions?** OpenAI's standard retirement date is
+December 11, 2026; follow the notice for the account or workspace that owns the
+GPT. Custom Actions do not transfer when you migrate a GPT. Check that you can
+access the hosted app and separately test the tools you rely on. See the
+[OpenAI migration FAQ](https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq).
 
 ### Install the Gemini CLI extension
 
